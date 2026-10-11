@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply font-sans text-navy antialiased; }
+  ::selection { background: #ffc857; color: #071b36; }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-leaf px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-leaf/30 transition hover:-translate-y-0.5 hover:bg-leaf-dark;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border-2 border-navy px-6 py-3 text-sm font-semibold text-navy transition hover:bg-navy hover:text-white;
+  }
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[.2em] text-brand;
+  }
+  .card {
+    @apply rounded-2xl border border-slate-200 bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+  .icon-tile {
+    @apply grid h-12 w-12 place-items-center rounded-2xl bg-brand-50 text-2xl;
+  }
+  .input {
+    @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-brand focus:ring-4 focus:ring-brand/15;
+  }
+
+  /* scroll reveal (only when JS is on, so content is never hidden without it) */
+  .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  .js .reveal.show { opacity: 1; transform: none; }
+}
