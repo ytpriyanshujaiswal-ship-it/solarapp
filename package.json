@@ -1,0 +1,12 @@
+{
+  "name": "pushpendra-power-solar-site",
+  "private": true,
+  "version": "2.0.0",
+  "scripts": {
+    "build": "tailwindcss -i css/tailwind-input.css -o css/style.css --minify",
+    "watch": "tailwindcss -i css/tailwind-input.css -o css/style.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  }
+}
